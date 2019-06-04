@@ -1,0 +1,19 @@
+
+usquid:S00116	"QRename this field "Monday" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(–¥Ñ´ýÿÿÿÿ8Õã¯º¯-
+Gsquid:S1659	"$Declare "Sunday" on a separate line.(–¥Ñ´ýÿÿÿÿ8ËÅ°º¯-
+wsquid:S00116	"SRename this field "Thursday" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(–¥Ñ´ýÿÿÿÿ8ËÅ°º¯-
+Hsquid:S1659	"%Declare "Tuesday" on a separate line.(–¥Ñ´ýÿÿÿÿ8Õã¯º¯-
+vsquid:S00116	"RRename this field "Tuesday" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(–¥Ñ´ýÿÿÿÿ8Õã¯º¯-
+rsquid:S00120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(ÄïáÆ
+Qsquid:S1068"3Remove this unused "sceneController" private field.(·Øç´8¾ˆáº¯-
+Isquid:S1659	"&Declare "Saturday" on a separate line.(–¥Ñ´ýÿÿÿÿ8ËÅ°º¯-
+Isquid:S1659	"&Declare "Thursday" on a separate line.(–¥Ñ´ýÿÿÿÿ8ËÅ°º¯-
+Jsquid:S1659	"'Declare "Wednesday" on a separate line.(–¥Ñ´ýÿÿÿÿ8ËÅ°º¯-
+xsquid:S00116	"TRename this field "Wednesday" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(–¥Ñ´ýÿÿÿÿ8ËÅ°º¯-
+wsquid:S00116	"SRename this field "Saturday" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(–¥Ñ´ýÿÿÿÿ8ËÅ°º¯-
+[squid:S00107&"<Method has 8 parameters, which is greater than 7 authorized.(Ë…Òõ8¨ò·º¯-
+usquid:S00116	"QRename this field "Friday" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(–¥Ñ´ýÿÿÿÿ8ËÅ°º¯-
+Gsquid:S1659	"$Declare "Monday" on a separate line.(–¥Ñ´ýÿÿÿÿ8Õã¯º¯-
+Gsquid:S1659	"$Declare "Friday" on a separate line.(–¥Ñ´ýÿÿÿÿ8ËÅ°º¯-
+tsquid:S00116	"PRename this field "Names" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(–¥Ñ´ýÿÿÿÿ8ƒ«¸º¯-
+usquid:S00116	"QRename this field "Sunday" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(–¥Ñ´ýÿÿÿÿ8ËÅ°º¯-

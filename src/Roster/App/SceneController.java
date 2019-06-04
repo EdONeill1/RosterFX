@@ -12,13 +12,16 @@ public class SceneController {
         this.stage = stage;
         this.screenWidth = screenWidth;
         this.screenHeight = screenHeight;
-        showStartScene();
+        showRosterScene();
     }
-    public void showStartScene(){
-
-        stage.setScene(new Scene(new RosterScreen(screenWidth, screenHeight, stage, this)));
+    public void showRosterScene(){
+        stage.setX(screenWidth/2);
+        stage.setY(screenHeight/2);
+        stage.setWidth(screenWidth);
+        stage.setHeight(screenHeight);
         stage.show();
-
-
+    }
+    public void showStartScene() {
+        stage.setScene(new Scene(new RosterScreen(screenWidth, screenHeight, stage, this)));
     }
 }

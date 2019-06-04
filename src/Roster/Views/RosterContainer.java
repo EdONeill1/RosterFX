@@ -23,15 +23,13 @@ public class RosterContainer extends VBox {
 
         HBox rosterPaddingBottom = new RosterPadding(width, paddingHeight);
 
-        Roster roster = new Roster(width,rosterHeight, masterController);
+        Roster roster = new Roster(width, rosterHeight, masterController);
 
 
         this.setPrefSize(width, height);
 
         this.getChildren().addAll(namesDays, rosterPaddingTop, roster, rosterPaddingBottom);
-
-
-
     }
+
 
 }

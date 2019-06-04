@@ -1,0 +1,6 @@
+
+qsquid:MaximumInheritanceDepth"<This class has 6 parents which is greater than 5 authorized.(Ôˆ›½üÿÿÿÿ8‡´Ý¸¯-
+Ysquid:S1172	"6Remove this unused method parameter "sceneController".(ÿŸ½•úÿÿÿÿ8Î…‰»¯-
+rsquid:S00120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(í¾ø¯
+ksquid:UselessImportCheck"@Remove this unused import 'Roster.Controllers.MasterController'.(‹Žú¾8Î…‰»¯-
+Ssquid:S1481"0Remove this unused "rosterWidth" local variable.(ØÒ¢÷ýÿÿÿÿ8ïÊã¸¯-
