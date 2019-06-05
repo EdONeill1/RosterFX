@@ -2,15 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="cdb932d9-7e58-4d94-93a9-e7b232ef17da" name="Default" comment="test commit">
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/3/3/3325de5238987a45b3c4f051cec4b5728556747a" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/3/3/3325de5238987a45b3c4f051cec4b5728556747a" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/9/3/933a9ad9f741aca70e00d61b20d0eccc960e990f" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/9/3/933a9ad9f741aca70e00d61b20d0eccc960e990f" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/a/9/a9ce5b4f37d25fdb5e7cf95f96a33ec4e42f813d" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/a/9/a9ce5b4f37d25fdb5e7cf95f96a33ec4e42f813d" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/a/c/ac657f69702acaded24e8ad09a456df9f77c1cc6" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/a/c/ac657f69702acaded24e8ad09a456df9f77c1cc6" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/b/f/bf832c9f4caef015c2025d2dd98074e2584eb540" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/b/f/bf832c9f4caef015c2025d2dd98074e2584eb540" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/d/6/d61cdfdf2de0b0e428ace1681caf5a8bd852b7cb" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/d/6/d61cdfdf2de0b0e428ace1681caf5a8bd852b7cb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/f/1/f12d04040e2904579508dcdbb206bb8a4cf5f41c" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/f/1/f12d04040e2904579508dcdbb206bb8a4cf5f41c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/f/3/f363d330e028569e3317ba78e6fda204f7176dce" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/f/3/f363d330e028569e3317ba78e6fda204f7176dce" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Roster/App/RosterScreen.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Roster/App/RosterScreen.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Roster/App/SceneController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Roster/App/SceneController.java" afterDir="false" />
     </list>
@@ -84,8 +75,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Roster/App/SceneController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="344">
-              <caret line="27" selection-start-line="27" selection-end-line="27" />
+            <state relative-caret-position="133">
+              <caret line="40" column="7" selection-start-line="40" selection-start-column="7" selection-end-line="43" selection-end-column="38" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -96,8 +87,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/Roster/App/RosterScreen.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="176">
-              <caret line="192" column="50" selection-start-line="192" selection-start-column="50" selection-end-line="192" selection-end-column="50" />
+            <state relative-caret-position="340">
+              <caret line="140" lean-forward="true" selection-start-line="140" selection-end-line="140" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -350,12 +341,12 @@
       <workItem from="1559485491336" duration="181000" />
       <workItem from="1559595046018" duration="112000" />
       <workItem from="1559662182763" duration="14181000" />
-      <workItem from="1559746144348" duration="1717000" />
+      <workItem from="1559746144348" duration="5200000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="23934000" />
+    <option name="totallyTimeSpent" value="27417000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -379,7 +370,7 @@
       <window_info id="UI Designer" order="6" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.329927" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.12992701" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.24817519" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -394,7 +385,7 @@
       <window_info anchor="bottom" id="Docker" order="14" show_stripe_button="false" />
       <window_info anchor="bottom" id="SonarLint" order="15" weight="0.329927" />
       <window_info anchor="bottom" id="Database Changes" order="16" />
-      <window_info anchor="bottom" id="Terminal" order="17" weight="0.329927" />
+      <window_info anchor="bottom" id="Terminal" order="17" weight="0.04379562" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -532,8 +523,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Roster/App/SceneController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="344">
-          <caret line="27" selection-start-line="27" selection-end-line="27" />
+        <state relative-caret-position="133">
+          <caret line="40" column="7" selection-start-line="40" selection-start-column="7" selection-end-line="43" selection-end-column="38" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -542,8 +533,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Roster/App/RosterScreen.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="176">
-          <caret line="192" column="50" selection-start-line="192" selection-start-column="50" selection-end-line="192" selection-end-column="50" />
+        <state relative-caret-position="340">
+          <caret line="140" lean-forward="true" selection-start-line="140" selection-end-line="140" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
