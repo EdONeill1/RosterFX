@@ -1,4 +1,4 @@
 
-rsquid:S00120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(ÄïáÆ
 ¤squid:S1186	"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(¤…‡—þÿÿÿÿ8è¦¬¹¯-
 Qsquid:S1068"4Remove this unused "masterController" private field.(®ñÎu8Â®»¹¯-
+rsquid:S00120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(ÄïáÆ

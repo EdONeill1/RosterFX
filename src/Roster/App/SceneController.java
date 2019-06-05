@@ -25,11 +25,7 @@ public class SceneController {
         showStartScene();
 
     }
-    public void showRosterScene(){
 
-
-
-    }
     public void showStartScene() {
         stage.setX(screenWidth);
         stage.setY(screenHeight);
