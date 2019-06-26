@@ -85,6 +85,7 @@ public class RosterScreen extends VBox {
         for(int i = 0; i < barPeople.size(); i++){
             buttonList.add(new Button("Give Days Off"));
         }
+
         for(int i = 0; i < barPeople.size(); i++){
             namesAndDays.add(new TextField(barPeople.get(i).getName()));
             for(int j = 0; j < 7; j++) {
@@ -92,58 +93,37 @@ public class RosterScreen extends VBox {
             }
         }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-        ArrayList<HBox> inputs = new ArrayList<>();
-        for(int i = 0; i < namesAndDays.size(); i++){
-            inputs.add(new HBox(namesAndDays.get(i)));
-            for(int j = 0; j < 7; j++){
-                inputs.add(new HBox(days.get(j)));
-            }
-        }
-
-
-
-
-
-
         Button makeRosterButton = new Button("Make Roster");
         Button deleteButton = new Button("Delete Someone");
         Button addButton = new Button("Add Someone");
         HBox commandButtons = new HBox(makeRosterButton, deleteButton, addButton);
         commandButtons.setAlignment(Pos.CENTER);
 
+        ArrayList<HBox> inputs = new ArrayList<>();
+        for(int i = 0; i < barPeople.size(); i++){
+            inputs.add(new HBox(new TextField(namesAndDays.get(i).getText())));
+            for(int j = 0; j < 7; j++){
+                inputs.add(new HBox(new TextField(namesAndDays.get(j).getText())));
+
+            }
+        }
+        HBox box = new HBox();
         this.getChildren().addAll(title, commandButtons);
 
+        for(int i = 0; i < barPeople.size(); i++) {
+            box.getChildren().add(new TextField(barPeople.get(i).getName()));
 
+            int limit = 0;
 
+            while(limit < 7){
 
+                box.getChildren().add(new TextField(days.get(limit).getText()));
+                limit++;
+            }
 
+        }
 
-
-
-
-
-
+        this.getChildren().add(box);
 
 
 
@@ -188,8 +168,7 @@ public class RosterScreen extends VBox {
                 for(int i = 0; i < barPeople.size(); i++) {
                     if (barPeople.get(i).getName().equals(option.getText())) {
                         System.out.println(barPeople.get(i).getName());
-                        this.getChildren().remove(inputs.get(i));
-                        inputs.remove(i);
+
                         barPeople.remove(i);
                         namesAndDays.remove(i);
                     }
