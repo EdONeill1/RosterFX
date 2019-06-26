@@ -1,29 +1,32 @@
 package Roster.App;
+import Roster.Controllers.MasterController;
+import Roster.Employee;
 import Roster.Master;
+
+import javafx.beans.value.ChangeListener;
+import javafx.beans.value.ObservableValue;
+import javafx.collections.ObservableList;
 import javafx.geometry.Pos;
 import javafx.scene.Node;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
+import javafx.scene.layout.GridPane;
 import javafx.scene.layout.HBox;
 import javafx.scene.layout.StackPane;
 import javafx.scene.layout.VBox;
-import javafx.scene.paint.Color;
 import javafx.scene.shape.Line;
-import javafx.scene.shape.Rectangle;
 import javafx.scene.text.Font;
-import javafx.stage.Popup;
+import javafx.scene.text.Text;
 import javafx.stage.Stage;
 
-import javax.swing.*;
 
-import java.util.ArrayList;
-
-import static javafx.scene.paint.Color.BLACK;
+import java.util.*;
 
 
 public class RosterScreen extends VBox {
+    MasterController mastercontroller;
     public RosterScreen(double screenWidth, double screenHeight, Stage primaryStage, SceneController sceneController) {
         super(0);
         Label header = new Label("ROSTER");
@@ -31,29 +34,25 @@ public class RosterScreen extends VBox {
         title.setAlignment(Pos.CENTER);
         header.setFont(new Font(screenWidth / 20));
 
-        ArrayList<TextField> barPeople = new ArrayList<>();
-        barPeople.add(new TextField("Natalia "));
-        barPeople.add(new TextField("Maria   "));
-        barPeople.add(new TextField("Louise"));
-        barPeople.add(new TextField("Sandra"));
-        barPeople.add(new TextField("Vangie "));
-        barPeople.add(new TextField("Jay     "));
-        barPeople.add(new TextField("Dylan   "));
-        barPeople.add(new TextField("Ana"));
-        barPeople.add(new TextField("Emmaunel"));
-        barPeople.add(new TextField("Ivan"));
-        barPeople.add(new TextField("Anna"));
-        barPeople.add(new TextField("Nubia"));
-        barPeople.add(new TextField("Sophia"));
-        barPeople.add(new TextField("Janine"));
-        barPeople.add(new TextField("Saul"));
-        barPeople.add(new TextField("Rafael A"));
-        barPeople.add(new TextField("Tanise"));
-        barPeople.add(new TextField("Jaderson"));
-        barPeople.add(new TextField("Matheus"));
-        barPeople.add(new TextField("Edward"));
-        barPeople.add(new TextField("Emmet"));
-
+        ArrayList<Employee> barPeople = new ArrayList<>();
+        barPeople.add(new Employee("Natalia ", new int[]{0, 1, 1}, new int[]{1, 0, 0, 1, 1, 1, 1, 1}));
+        barPeople.add(new Employee("Louise", new int[]{1, 0, 0}, new int[]{0, 1, 1, 1, 1, 0, 0}));
+        barPeople.add(new Employee("Sandra", new int[]{1, 0, 0}, new int[]{1, 1, 1, 1, 1, 0, 0}));
+        barPeople.add(new Employee("Vangie ", new int[]{1, 0, 0}, new int[]{1, 1, 1, 1, 1, 0, 0}));
+        barPeople.add(new Employee("Jay     ", new int[]{1, 0, 1}, new int[]{1, 1, 1, 0, 0, 1, 1}));
+        barPeople.add(new Employee("Dylan   ", new int[]{0, 0, 1}, new int[]{1, 1, 1, 1, 1, 0, 0}));
+        barPeople.add(new Employee("Ana", new int[]{1, 1, 0}, new int[]{1, 1, 1, 1, 1, 1, 1}));
+        barPeople.add(new Employee("Emmaunel", new int[]{1, 1, 1}, new int[]{1, 1, 1, 1, 1, 1, 1}));
+        barPeople.add(new Employee("Ivan", new int[]{0, 1, 1}, new int[]{1, 1, 1, 1, 1, 1, 1}));
+        barPeople.add(new Employee("Anna", new int[]{1, 1, 0}, new int[]{1, 1, 1, 1, 1, 1, 1}));
+        barPeople.add(new Employee("Nubia", new int[]{0, 1, 1}, new int[]{1, 1, 1, 1, 1, 1, 1}));
+        barPeople.add(new Employee("Sophia", new int[]{1, 1, 0}, new int[]{1, 1, 1, 1, 1, 1, 1}));
+        barPeople.add(new Employee("Janine", new int[]{1, 1, 1}, new int[]{1, 1, 1, 1, 1, 1, 1}));
+        barPeople.add(new Employee("Saul", new int[]{0, 1, 1}, new int[]{1, 1, 1, 1, 1, 1, 1}));
+        barPeople.add(new Employee("Rafael A", new int[]{0, 1, 1}, new int[]{1, 1, 1, 1, 1, 1, 1}));
+        barPeople.add(new Employee("Tanise", new int[]{1, 1, 1}, new int[]{1, 1, 1, 1, 1, 1, 1}));
+        barPeople.add(new Employee("Matheus", new int[]{0, 1, 1}, new int[]{1, 1, 1, 1, 1, 1, 1}));
+        barPeople.add(new Employee("Edward", new int[]{0, 0, 1}, new int[]{0, 0, 0, 1, 1, 1, 0}));
 
 
         Line divider = new Line(screenWidth / 4 + 150, screenHeight / 4, screenWidth / 4 + screenWidth / 2 - 150, screenHeight / 4);
@@ -81,17 +80,49 @@ public class RosterScreen extends VBox {
         days.add(Saturday);
         days.add(Sunday);
 
-        ArrayList<HBox> namesAndDays = new ArrayList<>();
-        for(int i = 0; i < 21; i++){
-            namesAndDays.add(new HBox(barPeople.get(i)));
+        ArrayList<TextField> namesAndDays = new ArrayList<>();
+        ArrayList<Button> buttonList = new ArrayList<>();
+        for(int i = 0; i < barPeople.size(); i++){
+            buttonList.add(new Button("Give Days Off"));
+        }
+        for(int i = 0; i < barPeople.size(); i++){
+            namesAndDays.add(new TextField(barPeople.get(i).getName()));
             for(int j = 0; j < 7; j++) {
-                namesAndDays.get(i).getChildren().addAll(new TextField(days.get(j).getText()));
+                namesAndDays.add(new TextField(days.get(j).getText()));
             }
         }
-        ArrayList<VBox> inputs = new ArrayList<>();
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        ArrayList<HBox> inputs = new ArrayList<>();
         for(int i = 0; i < namesAndDays.size(); i++){
-            inputs.add(new VBox(namesAndDays.get(i), divider));
+            inputs.add(new HBox(namesAndDays.get(i)));
+            for(int j = 0; j < 7; j++){
+                inputs.add(new HBox(days.get(j)));
+            }
         }
+
+
+
 
 
 
@@ -102,13 +133,38 @@ public class RosterScreen extends VBox {
         commandButtons.setAlignment(Pos.CENTER);
 
         this.getChildren().addAll(title, commandButtons);
-        for(int i = 0; i < inputs.size(); i++){
-            this.getChildren().add(inputs.get(i));
-        }
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+        makeRosterButton.setOnMouseClicked(event -> {
+            for(int i = 0; i < barPeople.size(); i++){
+                for(int j = 0; j < 7; j++){
+                    if(namesAndDays.get(i).getText().equals("off")){
+                        System.out.println("success");
+                    }
+                }
+            }
+
+            Scene root = new Scene(new Master(screenWidth, screenHeight, sceneController, barPeople));
+            primaryStage.setScene(root);
+            primaryStage.setFullScreen(true);
+            primaryStage.setResizable(false);
+        });
         addButton.setOnMouseClicked(e -> {
             deleteButton.setDisable(true);
-            TextField addPerson = new TextField();
+            Employee addPerson = new Employee();
+            barPeople.add(addPerson);
             HBox inputsAddPerson = new HBox(addPerson);
             for(int i = 0; i < 7; i++){ inputsAddPerson.getChildren().addAll(new TextField(days.get(i).getText())); }
             VBox inputsAdd = new VBox(inputsAddPerson, divider);
@@ -117,10 +173,8 @@ public class RosterScreen extends VBox {
         });
         deleteButton.setOnMouseClicked(e -> {
             addButton.setDisable(true);
-
             StackPane removeStage = new StackPane();
             removeStage.setPrefSize(screenWidth, screenHeight);
-
             Label removeCommand = new Label("Type in name of person you wish to remove from the roster      ");
             TextField option = new TextField();
             Button enterButton = new Button("Enter");
@@ -128,45 +182,48 @@ public class RosterScreen extends VBox {
             removeStage.getChildren().add(removeBox);
             this.getChildren().add(removeStage);
 
-            deleteButton.setOnMouseClicked(r -> {
-                for(int i = 0; i < barPeople.size(); i++){
-
-                    System.out.println("this is option: " + option.getText());
-                    barPeople.remove(barPeople.get(i));
-                    this.getChildren().remove(removeStage);
-                    addButton.setDisable(false);
+            enterButton.setOnMouseClicked(r -> {
 
 
+                for(int i = 0; i < barPeople.size(); i++) {
+                    if (barPeople.get(i).getName().equals(option.getText())) {
+                        System.out.println(barPeople.get(i).getName());
+                        this.getChildren().remove(inputs.get(i));
+                        inputs.remove(i);
+                        barPeople.remove(i);
+                        namesAndDays.remove(i);
+                    }
                 }
-
-
+                this.getChildren().remove(removeStage);
             });
 
-
-
-
-
-
+            addButton.setDisable(false);
 
         });
 
         this.setAlignment(Pos.CENTER);
 
-
-
         primaryStage.setX(screenWidth/4);
-        primaryStage.setY(screenHeight/4 );
-        primaryStage.setWidth(screenWidth * 0.52);
-        primaryStage.setHeight(screenHeight * 0.60);
+        primaryStage.setY(screenHeight/4);
+        primaryStage.setWidth(screenWidth * 0.7);
+        primaryStage.setHeight(screenHeight * 0.7);
         primaryStage.setResizable(true);
+    }
 
-
-
-
-
-
-
-
+    public void checkIfOff(ArrayList<HBox> namesAndDays){
+//        for(int i = 0; i < namesAndDays.size(); i++){
+//            for(int j = 0; j < 7; j++){
+//
+//                addListener(new ChangeListener<String>() {
+//                    @Override
+//                    public void changed(ObservableValue<? extends String> observable,
+//                                        String oldValue, String newValue) {
+//
+//                        System.out.println(" Text Changed to  " + newValue + ")\n");
+//                    }
+//                });
+//            }
+//        }
 
     }
 }

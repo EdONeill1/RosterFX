@@ -1,6 +1,7 @@
 
 lsquid:MaximumInheritanceDepth"<This class has 6 parents which is greater than 5 authorized.(ùîïÐ8®©‰¹¯-
-Zsquid:S1172
-"7Remove this unused method parameter "masterController".(±ãÖéýÿÿÿÿ8å†²¹¯-
-rsquid:S00120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(‘Þ³Ý
 jsquid:UselessImportCheck"@Remove this unused import 'Roster.Controllers.RosterController'.(¦žÕy8å†²¹¯-
+rsquid:S00120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(‘Þ³Ý
+Isquid:S1172
+"&Remove these unused method parameters.(±ãÖéýÿÿÿÿ8å†²¹¯-
+esquid:UselessImportCheck"5Remove this unused import 'javafx.scene.layout.VBox'.(íÆáÂùÿÿÿÿ8…±×Â³-

@@ -23,3 +23,5 @@ S
 #src/Roster/App/SceneController.java,a/c/ac657f69702acaded24e8ad09a456df9f77c1cc6
 F
 src/Roster/Master.java,d/6/d61cdfdf2de0b0e428ace1681caf5a8bd852b7cb
+H
+src/Roster/Employee.java,7/c/7cdf8d874dfc5122f3e592f5733e415f079e84de

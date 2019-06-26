@@ -22,43 +22,36 @@ public class SceneController {
         this.stage = stage;
         this.screenWidth = screenWidth;
         this.screenHeight = screenHeight;
-        showStartScene();
+        showOpeningScene();
     }
+    public void showOpeningScene() {
+        ImageView splashScreen = new ImageView();
+        Image splash = new Image("Roster/resources/logo.jpg");
+        splashScreen.setImage(splash);
 
-    public void showStartScene() {
-        stage.setX(screenWidth);
-        stage.setY(screenHeight);
-        stage.setWidth(screenWidth);
-        stage.setHeight(screenHeight);
+        stage.setX(screenWidth/2 - splash.getWidth()/2);
+        stage.setY(screenHeight/2 - splash.getHeight()/2);
+        stage.setWidth(screenWidth/2);
+        stage.setHeight(screenHeight/2);
+
+
+        splashScreen.setOnMouseClicked(e -> {
+            stage.setScene(new Scene(new RosterScreen(screenWidth, screenHeight, stage, this)));
+        });
+
+        StackPane displaySplash = new StackPane();
+        displaySplash.getChildren().add(splashScreen);
+        displaySplash.setBackground(new Background(new BackgroundFill(Color.rgb(0, 0, 0), CornerRadii.EMPTY, Insets.EMPTY)));
+        displaySplash.setAlignment(splashScreen, Pos.CENTER);
+
+        Scene loader = new Scene(displaySplash, screenWidth / 1.5, screenHeight / 1.75);
+
+        stage.setTitle("Ashling Hotel Bar Roster");
+        stage.setScene(loader);
+        stage.setResizable(false);
         stage.show();
-        stage.setScene(new Scene(new RosterScreen(screenWidth, screenHeight, stage, this)));
-
     }
 
-    public void showRemovePersonScene() {
 
 
-        stage.setX(screenWidth/2);
-        stage.setY(screenHeight/2);
-        stage.setWidth(screenWidth);
-        stage.setHeight(screenHeight);
-//
-//        Button deleteComplete = new Button("Removal Finished");
-//
-//        deleteComplete.setOnMouseClicked(e -> {
-//            stage.setScene(new Scene(new com.billrobotie.app.StartScreen(screenWidth, screenHeight, stage, this)));
-//        });
-//
-//        StackPane displaySplash = new StackPane();
-//        displaySplash.getChildren().addAll(stage, deleteComplete);
-//        displaySplash.setBackground(new Background(new BackgroundFill(Color.rgb(0, 0, 0), CornerRadii.EMPTY, Insets.EMPTY)));
-//        displaySplash.setAlignment(Pos.CENTER);
-//
-//        Scene loader = new Scene(displaySplash, screenWidth / 1.5, screenHeight / 1.75);
-//
-//        stage.setTitle("Bill Robotie");
-//        stage.setScene(loader);
-//        stage.setResizable(false);
-//        stage.show();
-    }
 }

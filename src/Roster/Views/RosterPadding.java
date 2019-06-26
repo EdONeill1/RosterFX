@@ -1,5 +1,6 @@
 package Roster.Views;
 
+import javafx.scene.control.TextField;
 import javafx.scene.layout.HBox;
 
 public class RosterPadding extends HBox {
@@ -8,5 +9,6 @@ public class RosterPadding extends HBox {
         this.setPrefWidth(width);
         this.setPrefHeight(height);
     }
+
 
 }
