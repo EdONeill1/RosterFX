@@ -1,25 +1,19 @@
 
-V
-squid:S106d"9Replace this use of System.out or System.err by a logger.(Ç†§È8Ò†¨Ù¸-
-\
-squid:S106¸"9Replace this use of System.out or System.err by a logger.(•ÕëŽÿÿÿÿÿ8¼„›Ì¸-
-Lsquid:S1481_")Remove this unused "rand" local variable.(šŸ«íøÿÿÿÿ8 ª—Ù¸-
-osquid:CommentedOutCodeLineÓ"<This block of commented-out lines of code should be removed.(‡ƒÓŸøÿÿÿÿ8¼„›Ì¸-
-usquid:S00117;"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Ê¸Ôîüÿÿÿÿ8©ÔÀÁ²-
-psquid:S00117="QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ýßäÑ8©ÔÀÁ²-
-usquid:S00117C"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(³È´õþÿÿÿÿ8©ÔÀÁ²-
-Ysquid:UselessImportCheck
-".Remove this unused import 'javafx.scene.Node'.(ÑÖ¬ï8–žóŠ·-
-nsquid:UselessImportCheck">Remove this unused import 'javafx.collections.ObservableList'.(ÄÜ€éüÿÿÿÿ8–žóŠ·-
-qsquid:MaximumInheritanceDepth"<This class has 6 parents which is greater than 5 authorized.(Š‰šùÿÿÿÿ8êÚÂ¸¯-
-isquid:UselessImportCheck"9Remove this unused import 'javafx.scene.layout.GridPane'.(ÖÀ¹¯ûÿÿÿÿ8“ú”‹·-
-usquid:S3776"RRefactor this method to reduce its Cognitive Complexity from 23 to the 15 allowed.(©ô•«üÿÿÿÿ8àú•Ù¸-
-psquid:S00117G"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Š¬¾”8©ÔÀÁ²-
+Wsquid:UselessImportCheck".Remove this unused import 'javafx.scene.Node'.(ÑÖ¬ï8Ç™•®¹-
+ssquid:S00117"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(³È´õþÿÿÿÿ8Ç™•®¹-
+^squid:UselessImportCheck"5Remove this unused import 'javafx.scene.paint.Color'.(Ïî£à8Ç™•®¹-
+nsquid:S00117"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ýßäÑ8Ç™•®¹-
+ssquid:S00117"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Ê¸Ôîüÿÿÿÿ8Ç™•®¹-
+ssquid:S00117"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÇÄÕþýÿÿÿÿ8Ç™•®¹-
+nsquid:S00117"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Š¬¾”8Ç™•®¹-
+gsquid:UselessImportCheck"9Remove this unused import 'javafx.scene.shape.Rectangle'.(ÖÉ­Œþÿÿÿÿ8Ç™•®¹-
+]squid:UselessImportCheck"/Remove this unused import 'javafx.stage.Popup'.(›Ü…Èÿÿÿÿÿ8Ç™•®¹-
+nsquid:S00117"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¾‰¥ñ8Ç™•®¹-
+osquid:MaximumInheritanceDepth"<This class has 6 parents which is greater than 5 authorized.(Š‰šùÿÿÿÿ8Ç™•®¹-
+Wsquid:S1172"6Remove this unused method parameter "sceneController".(©ô•«üÿÿÿÿ8Ç™•®¹-
+T
+squid:S106"9Replace this use of System.out or System.err by a logger.(¿‹Ã¾8Ç™•®¹-
+Xsquid:UselessImportCheck"/Remove this unused import 'javafx.scene.Scene'.(Õü²8Ç™•®¹-
 wsquid:S00120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(ËÒ„êÿÿÿÿÿ
-osquid:CommentedOutCodeLineØ"<This block of commented-out lines of code should be removed.(¿ÝÁ“ùÿÿÿÿ8‘»¹·-
-psquid:S00117E"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¾‰¥ñ8©ÔÀÁ²-
-osquid:CommentedOutCodeLineÐ"<This block of commented-out lines of code should be removed.(³„ áøÿÿÿÿ8¼„›Ì¸-
-psquid:S00117?"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÉÆÈÿ8©ÔÀÁ²-
-usquid:S00117A"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÇÄÕþýÿÿÿÿ8©ÔÀÁ²-
-osquid:CommentedOutCodeLineÖ"<This block of commented-out lines of code should be removed.(×©¼ôúÿÿÿÿ8¼„›Ì¸-
-–squid:S1319Ï"wThe type of the "namesAndDays" object should be an interface such as "List" rather than the implementation "ArrayList".(ð•œ—8¼„›Ì¸-
+Zsquid:UselessImportCheck"*Remove this unused import 'Roster.Master'.(šòÀ’ÿÿÿÿÿ8Ç™•®¹-
+nsquid:S00117"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÉÆÈÿ8Ç™•®¹-

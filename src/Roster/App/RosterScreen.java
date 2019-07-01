@@ -79,9 +79,8 @@ public class RosterScreen extends VBox {
         days.add(Friday);
         days.add(Saturday);
         days.add(Sunday);
-
-        ArrayList<TextField> namesAndDays = new ArrayList<>();
         ArrayList<Button> buttonList = new ArrayList<>();
+        ArrayList<TextField> namesAndDays = new ArrayList<>();
         for(int i = 0; i < barPeople.size(); i++){
             buttonList.add(new Button("Give Days Off"));
         }
@@ -99,31 +98,30 @@ public class RosterScreen extends VBox {
         HBox commandButtons = new HBox(makeRosterButton, deleteButton, addButton);
         commandButtons.setAlignment(Pos.CENTER);
 
-        ArrayList<HBox> inputs = new ArrayList<>();
-        for(int i = 0; i < barPeople.size(); i++){
-            inputs.add(new HBox(new TextField(namesAndDays.get(i).getText())));
-            for(int j = 0; j < 7; j++){
-                inputs.add(new HBox(new TextField(namesAndDays.get(j).getText())));
-
-            }
+//        ArrayList<HBox> inputs = new ArrayList<>();
+//        for(int i = 0; i < barPeople.size(); i++){
+//            inputs.add(new HBox(new TextField(namesAndDays.get(i).getText())));
+//            for(int j = 0; j < 7; j++){
+//                inputs.add(new HBox(new TextField(namesAndDays.get(j).getText())));
+//                this.getChildren().addAll(title, commandButtons);
+//                for(int i = 0; i < inputs.size(); i++){
+//                    this.getChildren().add(inputs.get(i));
+//                }
+//            }
+//        }
+        ArrayList<VBox> inputs = new ArrayList<>();
+        for(int i = 0; i < namesAndDays.size(); i++){
+            inputs.add(new VBox(namesAndDays.get(i), divider));
         }
-        HBox box = new HBox();
         this.getChildren().addAll(title, commandButtons);
-
-        for(int i = 0; i < barPeople.size(); i++) {
-            box.getChildren().add(new TextField(barPeople.get(i).getName()));
-
-            int limit = 0;
-
-            while(limit < 7){
-
-                box.getChildren().add(new TextField(days.get(limit).getText()));
-                limit++;
-            }
+        for(int i = 0; i < barPeople.size(); i++){
 
         }
 
-        this.getChildren().add(box);
+
+
+
+
 
 
 
