@@ -27,8 +27,13 @@ import java.util.*;
 
 public class RosterScreen extends VBox {
     MasterController mastercontroller;
+    double screenWidth;
+    double screenHeight;
     public RosterScreen(double screenWidth, double screenHeight, Stage primaryStage, SceneController sceneController) {
         super(0);
+        this.screenWidth = 500;
+        this.screenHeight = 500;
+
         Label header = new Label("ROSTER");
         VBox title = new VBox(header);
         title.setAlignment(Pos.CENTER);
@@ -79,27 +84,6 @@ public class RosterScreen extends VBox {
         days.add(Friday);
         days.add(Saturday);
         days.add(Sunday);
-        ArrayList<Button> buttonList = new ArrayList<>();
-        ArrayList<HBox> namesAndDays = new ArrayList<>();
-        for(int i = 0; i < barPeople.size(); i++){
-            buttonList.add(new Button("Give Days Off"));
-        }
-
-        for(int i = 0; i < barPeople.size(); i++){
-            namesAndDays.add(new HBox(new TextField(barPeople.get(i).getName())));
-            for(int j = 0; j < 7; j++) {
-                namesAndDays.add(new HBox(new TextField(days.get(j).getText())));
-            }
-        }
-
-        HBox mainHbox = new HBox();
-        ArrayList<VBox> hbox = new ArrayList<>();
-        for(int i = 0; i < namesAndDays.size(); i++){
-            hbox.add(new VBox(namesAndDays.get(i)));
-        }
-        mainHbox.getChildren().addAll(namesAndDays.get(0), namesAndDays.get(1), namesAndDays.get(2));
-
-
 
 
         Button makeRosterButton = new Button("Make Roster");
@@ -108,10 +92,6 @@ public class RosterScreen extends VBox {
         HBox commandButtons = new HBox(makeRosterButton, deleteButton, addButton);
         commandButtons.setAlignment(Pos.CENTER);
 
-        ArrayList<VBox> inputs = new ArrayList<>();
-        for(int i = 0; i < namesAndDays.size(); i++){
-            inputs.add(new VBox(namesAndDays.get(i), divider));
-        }
 
         ArrayList<HBox> boxes = new ArrayList<>();
         this.getChildren().addAll(title, commandButtons);
@@ -127,6 +107,12 @@ public class RosterScreen extends VBox {
 
         makeRosterButton.setOnMouseClicked(event -> {
 
+            System.out.println("Days off before requests:");
+            for (int i = 0; i < barPeople.size(); i++) {
+                System.out.println(barPeople.get(i).getName() + " : " + barPeople.get(i).getDaysOff());
+                System.out.println("    ******    ");
+            }
+
             ArrayList<HBox> requests = new ArrayList<>();
             int firstRequest = 0;
             int secondRequest = 0;
@@ -136,39 +122,36 @@ public class RosterScreen extends VBox {
                             for (int j = 0; j < 8; j++) {
                                     if (boxes.get(i).getChildren().get(j) instanceof TextField) {
                                         if (((TextField) boxes.get(i).getChildren().get(j)).getText().equals("off")) {
+                                            ((TextField) boxes.get(i).getChildren().get(j)).setText("off");
                                             if(firstRequest == 0){
                                                 firstRequest = j;
                                                 System.out.println("first request : " + firstRequest);
                                             }else if(firstRequest != 0){
                                                 secondRequest = j;
                                                 System.out.println("second request : " + secondRequest);
+                                                System.out.println("Current person to be changed is: " + barPeople.get(i).getName());
+                                                barPeople.get(i).setDaysOff(firstRequest, secondRequest);
+                                                firstRequest = 0;
+                                                secondRequest = 0;
                                             }
+
                                         }
+
                                     }
-                                barPeople.get(i).setDaysOff(firstRequest, secondRequest);
                                 }
-
-
-
-                        System.out.println(barPeople.get(i).getName() + " : " + barPeople.get(i).getDaysOff(0));
-                        System.out.println("    ******    ");
-
             }
+            System.out.println("Days off after requests: ");
+            for (int i = 0; i < barPeople.size(); i++) {
+                System.out.println(barPeople.get(i).getName() + " : " + barPeople.get(i).getDaysOff());
+                System.out.println("    ******    ");
+            }
+            System.out.println(screenHeight);
+            Scene root = new Scene(new Master(screenWidth, screenHeight, sceneController, barPeople));
+            primaryStage.setScene(root);
+            primaryStage.setFullScreen(true);
+            primaryStage.setResizable(false);
 
-
-
-
-
-
-
-
-
-//                        Scene root = new Scene(new Master(screenWidth, screenHeight, sceneController, barPeople));
-//                        primaryStage.setScene(root);
-//                        primaryStage.setFullScreen(true);
-//                        primaryStage.setResizable(false);
-
-                });
+        });
         addButton.setOnMouseClicked(e -> {
             deleteButton.setDisable(true);
             Employee addPerson = new Employee();
@@ -198,7 +181,7 @@ public class RosterScreen extends VBox {
                         System.out.println(barPeople.get(i).getName());
 
                         barPeople.remove(i);
-                        namesAndDays.remove(i);
+
                     }
                 }
                 this.getChildren().remove(removeStage);

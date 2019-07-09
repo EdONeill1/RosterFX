@@ -2,16 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="cdb932d9-7e58-4d94-93a9-e7b232ef17da" name="Default" comment="test commit">
-      <change afterPath="$PROJECT_DIR$/src/Roster/KillMeHBox.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/7/c/7cdf8d874dfc5122f3e592f5733e415f079e84de" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/7/c/7cdf8d874dfc5122f3e592f5733e415f079e84de" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/a/c/ac657f69702acaded24e8ad09a456df9f77c1cc6" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/a/c/ac657f69702acaded24e8ad09a456df9f77c1cc6" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/f/1/f12d04040e2904579508dcdbb206bb8a4cf5f41c" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/f/1/f12d04040e2904579508dcdbb206bb8a4cf5f41c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/AshlingHotel/Roster/App/RosterScreen.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/AshlingHotel/Roster/App/RosterScreen.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/AshlingHotel/Roster/Employee.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/AshlingHotel/Roster/Employee.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Roster/App/RosterScreen.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Roster/App/RosterScreen.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Roster/Employee.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Roster/Employee.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Roster/Master.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Roster/Master.java" afterDir="false" />
     </list>
     <ignored path="JavaFxApplication.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -71,8 +67,20 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/Roster/App/RosterScreen.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-215">
-              <caret line="141" column="72" lean-forward="true" selection-start-line="141" selection-start-column="72" selection-end-line="141" selection-end-column="72" />
+            <state relative-caret-position="264">
+              <caret line="34" column="32" selection-start-line="34" selection-start-column="32" selection-end-line="34" selection-end-column="32" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Roster/Master.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-276">
+              <caret line="20" column="53" lean-forward="true" selection-start-line="20" selection-start-column="53" selection-end-line="20" selection-end-column="53" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -83,8 +91,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Roster/Employee.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="290">
-              <caret line="37" column="56" selection-start-line="37" selection-start-column="56" selection-end-line="37" selection-end-column="56" />
+            <state relative-caret-position="267">
+              <caret line="36" column="31" selection-start-line="36" selection-start-column="31" selection-end-line="36" selection-end-column="31" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -150,9 +158,9 @@
         <option value="$PROJECT_DIR$/src/Roster/Views/Roster.java" />
         <option value="$PROJECT_DIR$/src/Roster/Views/RosterPadding.java" />
         <option value="$PROJECT_DIR$/src/Roster/App/Employee.java" />
-        <option value="$PROJECT_DIR$/src/Roster/Master.java" />
         <option value="$PROJECT_DIR$/src/Roster/KillMeHBox.java" />
         <option value="$PROJECT_DIR$/src/Roster/Employee.java" />
+        <option value="$PROJECT_DIR$/src/Roster/Master.java" />
         <option value="$PROJECT_DIR$/src/Roster/App/RosterScreen.java" />
       </list>
     </option>
@@ -371,12 +379,12 @@
       <workItem from="1562181925051" duration="191000" />
       <workItem from="1562615766527" duration="8442000" />
       <workItem from="1562627489415" duration="466000" />
-      <workItem from="1562674402516" duration="3159000" />
+      <workItem from="1562674402516" duration="7947000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="77413000" />
+    <option name="totallyTimeSpent" value="82201000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -391,16 +399,16 @@
     <frame x="188" y="23" width="1252" height="793" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.6703755" visible="true" weight="0.1694215" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.6703755" weight="0.1694215" />
       <window_info id="Structure" order="1" weight="0.26198348" />
-      <window_info id="Favorites" order="2" />
+      <window_info id="Favorites" order="2" visible="true" weight="0.32975206" />
       <window_info id="Designer" order="3" />
       <window_info id="Image Layers" order="4" />
       <window_info id="Capture Tool" order="5" />
       <window_info id="UI Designer" order="6" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.329927" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.31970802" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.17372262" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -415,7 +423,7 @@
       <window_info anchor="bottom" id="Docker" order="14" show_stripe_button="false" />
       <window_info anchor="bottom" id="SonarLint" order="15" weight="0.04379562" />
       <window_info anchor="bottom" id="Database Changes" order="16" />
-      <window_info anchor="bottom" id="Terminal" order="17" weight="0.8116788" />
+      <window_info anchor="bottom" id="Terminal" order="17" weight="0.15766424" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -572,16 +580,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Roster/Master.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="234">
-          <caret line="12" column="34" selection-start-line="12" selection-start-column="34" selection-end-line="12" selection-end-column="34" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Roster/App/SceneController.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="966">
@@ -604,8 +602,18 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Roster/Employee.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="290">
-          <caret line="37" column="56" selection-start-line="37" selection-start-column="56" selection-end-line="37" selection-end-column="56" />
+        <state relative-caret-position="267">
+          <caret line="36" column="31" selection-start-line="36" selection-start-column="31" selection-end-line="36" selection-end-column="31" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Roster/Master.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-276">
+          <caret line="20" column="53" lean-forward="true" selection-start-line="20" selection-start-column="53" selection-end-line="20" selection-end-column="53" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -614,8 +622,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Roster/App/RosterScreen.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-215">
-          <caret line="141" column="72" lean-forward="true" selection-start-line="141" selection-start-column="72" selection-end-line="141" selection-end-column="72" />
+        <state relative-caret-position="264">
+          <caret line="34" column="32" selection-start-line="34" selection-start-column="32" selection-end-line="34" selection-end-column="32" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>

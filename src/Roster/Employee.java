@@ -31,10 +31,10 @@ public class Employee extends HBox {
         return this.shifts;
     }
 
-    public int[] getDaysOff(int key) {
+    public int[] getDaysOff() {
         System.out.println(this.getName());
         for (int i = 0; i < 7; i++) {
-            if (key == daysOff[i]) {
+            if (daysOff[i] == 0) {
                 System.out.println("day " + i + " : " + this.daysOff[i]);
             }
         }
