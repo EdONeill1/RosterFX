@@ -80,17 +80,27 @@ public class RosterScreen extends VBox {
         days.add(Saturday);
         days.add(Sunday);
         ArrayList<Button> buttonList = new ArrayList<>();
-        ArrayList<TextField> namesAndDays = new ArrayList<>();
+        ArrayList<HBox> namesAndDays = new ArrayList<>();
         for(int i = 0; i < barPeople.size(); i++){
             buttonList.add(new Button("Give Days Off"));
         }
 
         for(int i = 0; i < barPeople.size(); i++){
-            namesAndDays.add(new TextField(barPeople.get(i).getName()));
+            namesAndDays.add(new HBox(new TextField(barPeople.get(i).getName())));
             for(int j = 0; j < 7; j++) {
-                namesAndDays.add(new TextField(days.get(j).getText()));
+                namesAndDays.add(new HBox(new TextField(days.get(j).getText())));
             }
         }
+
+        HBox mainHbox = new HBox();
+        ArrayList<VBox> hbox = new ArrayList<>();
+        for(int i = 0; i < namesAndDays.size(); i++){
+            hbox.add(new VBox(namesAndDays.get(i)));
+        }
+        mainHbox.getChildren().addAll(namesAndDays.get(0), namesAndDays.get(1), namesAndDays.get(2));
+
+
+
 
         Button makeRosterButton = new Button("Make Roster");
         Button deleteButton = new Button("Delete Someone");
@@ -98,47 +108,67 @@ public class RosterScreen extends VBox {
         HBox commandButtons = new HBox(makeRosterButton, deleteButton, addButton);
         commandButtons.setAlignment(Pos.CENTER);
 
-//        ArrayList<HBox> inputs = new ArrayList<>();
-//        for(int i = 0; i < barPeople.size(); i++){
-//            inputs.add(new HBox(new TextField(namesAndDays.get(i).getText())));
-//            for(int j = 0; j < 7; j++){
-//                inputs.add(new HBox(new TextField(namesAndDays.get(j).getText())));
-//                this.getChildren().addAll(title, commandButtons);
-//                for(int i = 0; i < inputs.size(); i++){
-//                    this.getChildren().add(inputs.get(i));
-//                }
-//            }
-//        }
         ArrayList<VBox> inputs = new ArrayList<>();
         for(int i = 0; i < namesAndDays.size(); i++){
             inputs.add(new VBox(namesAndDays.get(i), divider));
         }
+
+        ArrayList<HBox> boxes = new ArrayList<>();
         this.getChildren().addAll(title, commandButtons);
         for(int i = 0; i < barPeople.size(); i++){
-
+            boxes.add(new HBox(new TextField(barPeople.get(i).getName()), new TextField(days.get(0).getText()), new TextField(days.get(1).getText()),
+                                                              new TextField(days.get(2).getText()), new TextField(days.get(3).getText()),
+                                                              new TextField(days.get(4).getText()), new TextField(days.get(5).getText()),
+                                                              new TextField(days.get(6).getText())));
         }
-
-
-
-
-
+        for(int i = 0; i < barPeople.size(); i++){ this.getChildren().add(boxes.get(i)); }
 
 
 
         makeRosterButton.setOnMouseClicked(event -> {
-            for(int i = 0; i < barPeople.size(); i++){
-                for(int j = 0; j < 7; j++){
-                    if(namesAndDays.get(i).getText().equals("off")){
-                        System.out.println("success");
-                    }
-                }
+
+            ArrayList<HBox> requests = new ArrayList<>();
+            int firstRequest = 0;
+            int secondRequest = 0;
+            for (int i = 0; i < barPeople.size(); i++) {
+                        requests.add(boxes.get(i));
+                        Node nodeOut = boxes.get(i);
+                            for (int j = 0; j < 8; j++) {
+                                    if (boxes.get(i).getChildren().get(j) instanceof TextField) {
+                                        if (((TextField) boxes.get(i).getChildren().get(j)).getText().equals("off")) {
+                                            if(firstRequest == 0){
+                                                firstRequest = j;
+                                                System.out.println("first request : " + firstRequest);
+                                            }else if(firstRequest != 0){
+                                                secondRequest = j;
+                                                System.out.println("second request : " + secondRequest);
+                                            }
+                                        }
+                                    }
+                                barPeople.get(i).setDaysOff(firstRequest, secondRequest);
+                                }
+
+
+
+                        System.out.println(barPeople.get(i).getName() + " : " + barPeople.get(i).getDaysOff(0));
+                        System.out.println("    ******    ");
+
             }
 
-            Scene root = new Scene(new Master(screenWidth, screenHeight, sceneController, barPeople));
-            primaryStage.setScene(root);
-            primaryStage.setFullScreen(true);
-            primaryStage.setResizable(false);
-        });
+
+
+
+
+
+
+
+
+//                        Scene root = new Scene(new Master(screenWidth, screenHeight, sceneController, barPeople));
+//                        primaryStage.setScene(root);
+//                        primaryStage.setFullScreen(true);
+//                        primaryStage.setResizable(false);
+
+                });
         addButton.setOnMouseClicked(e -> {
             deleteButton.setDisable(true);
             Employee addPerson = new Employee();

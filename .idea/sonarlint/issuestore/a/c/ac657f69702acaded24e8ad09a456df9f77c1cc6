@@ -1,5 +1,5 @@
 
+Osquid:S1602&",Remove useless curly braces around statement(ÁæÇ¡ÿÿÿÿÿ8ıÖôº-
+hsquid:UselessImportCheck"8Remove this unused import 'javafx.scene.control.Button'.(Ë Í‹øÿÿÿÿ8ıÖôº-
 wsquid:S00120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(ËÒ„êÿÿÿÿÿ
-Ssquid:S2209-"5Change this instance-reference to a static reference.(Ïâû8é°‹º-
-Osquid:S1602&",Remove useless curly braces around statement(ÁæÇ¡ÿÿÿÿÿ8é°‹º-
-hsquid:UselessImportCheck"8Remove this unused import 'javafx.scene.control.Button'.(Ë Í‹øÿÿÿÿ8é°‹º-
+Ssquid:S2209-"5Change this instance-reference to a static reference.(Ïâû8ıÖôº-

@@ -19,8 +19,8 @@ public class Employee extends HBox {
     public Employee(String name, int[] shifts, int[] daysOff) {
         super(0);
         this.name = name;
-        this.shifts = new int[]{0, 0, 0};
-        this.daysOff = new int[]{0, 0, 0, 0, 0, 0, 0};
+        this.shifts = shifts;
+        this.daysOff = daysOff;
     }
 
     public String getName() {
@@ -31,13 +31,23 @@ public class Employee extends HBox {
         return this.shifts;
     }
 
-    public int getDaysOff(int key) {
+    public int[] getDaysOff(int key) {
+        System.out.println(this.getName());
         for (int i = 0; i < 7; i++) {
-            if (daysOff[i] == key) {
-                System.out.println(i);
+            if (key == daysOff[i]) {
+                System.out.println("day " + i + " : " + this.daysOff[i]);
             }
         }
-        return daysOff[key];
+        return this.daysOff;
+
+    }
+
+    public void setDaysOff(int firstDay, int secondDay) {
+        for(int i = 0; i < 7; i++){
+            if(i == firstDay || i == secondDay){
+                daysOff[i] = 0;
+            }
+        }
 
     }
 }

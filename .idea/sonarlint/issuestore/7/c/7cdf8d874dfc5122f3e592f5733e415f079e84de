@@ -1,13 +1,14 @@
 
-…"squid:ClassVariableVisibilityCheck	"PMake name a static final constant or non-public and provide accessors if needed.( þÍ¾8ÐÒ´ä¶-
-fsquid:UselessImportCheck";Remove this unused import 'javafx.scene.control.TextField'.(¨¢¤¶8ËÛáæ¶-
+Rsquid:EmptyStatementUsageCheck"Remove this empty statement.(Åñ­õþÿÿÿÿ8ÊåÐä¶-
+U
+squid:S106&"9Replace this use of System.out or System.err by a logger.(´‘†8™®Âœ½-
+lsquid:MaximumInheritanceDepth"<This class has 6 parents which is greater than 5 authorized.(Ø˜‚þ8ëÒ¯ä¶-
 [
-squid:S106%"9Replace this use of System.out or System.err by a logger.(´‹¹öþÿÿÿÿ8…¤‚ç¶-
+squid:S106#"9Replace this use of System.out or System.err by a logger.(ÍÀÈøÿÿÿÿ8ýªÄœ½-
+]squid:UselessImportCheck"-Remove this unused import 'java.util.Arrays'.(î–˜Éüÿÿÿÿ8Ó¯ëæ¶-
 ‡"squid:ClassVariableVisibilityCheck
 "RMake shifts a static final constant or non-public and provide accessors if needed.(Ç’–ó8ÐÒ´ä¶-
-]squid:UselessImportCheck"-Remove this unused import 'java.util.Arrays'.(î–˜Éüÿÿÿÿ8Ó¯ëæ¶-
-rsquid:S00120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(í¾ø¯
-Isquid:S1172"&Remove these unused method parameters.(—¯–ýÿÿÿÿ8ëÒ¯ä¶-
 "squid:ClassVariableVisibilityCheck"SMake daysOff a static final constant or non-public and provide accessors if needed.(¾ðæøÿÿÿÿ8“©œå¶-
-Rsquid:EmptyStatementUsageCheck"Remove this empty statement.(Åñ­õþÿÿÿÿ8ÊåÐä¶-
-lsquid:MaximumInheritanceDepth"<This class has 6 parents which is greater than 5 authorized.(Ø˜‚þ8ëÒ¯ä¶-
+rsquid:S00120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(í¾ø¯
+fsquid:UselessImportCheck";Remove this unused import 'javafx.scene.control.TextField'.(¨¢¤¶8ËÛáæ¶-
+…"squid:ClassVariableVisibilityCheck	"PMake name a static final constant or non-public and provide accessors if needed.( þÍ¾8ÐÒ´ä¶-
