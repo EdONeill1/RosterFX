@@ -27,18 +27,24 @@ public class Employee extends HBox {
         return this.name;
     }
 
-    public int[] getShifts() {
-        return this.shifts;
+    public int getShifts(int key) {
+        for(int i = 0; i < 3; i++){
+            if(shifts[i] == key){
+                return shifts[i];
+            }
+        }
+        return -1;
     }
 
-    public int[] getDaysOff() {
+    public int getDaysOff() {
+        int count = 0;
         System.out.println(this.getName());
         for (int i = 0; i < 7; i++) {
             if (daysOff[i] == 0) {
-                System.out.println("day " + i + " : " + this.daysOff[i]);
+                count++;
             }
         }
-        return this.daysOff;
+        return count;
 
     }
 

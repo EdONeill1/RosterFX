@@ -1,21 +1,26 @@
 package Roster;
 
 import Roster.App.SceneController;
-import Roster.Controllers.MasterController;
-import javafx.geometry.Pos;
-import javafx.scene.control.Button;
-import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 import javafx.scene.layout.HBox;
 import javafx.scene.layout.VBox;
-import javafx.scene.paint.Color;
-import javafx.scene.shape.Rectangle;
 
+import java.lang.reflect.Array;
 import java.util.ArrayList;
+import java.util.Random;
 
 public class Master extends VBox {
+    int [] totalShifts = new int[9];
+    public int [] possibleMorningShifts = new int[3];
+    int [] possibleAfternoonShifts = new int[2];
+    int [] possibleNightShifts = new int[4];
 
     public Master(double screenWidth, double screenHeight, SceneController sceneController, ArrayList<Employee> barPeople){
+        this.totalShifts = totalShifts;
+        this.possibleMorningShifts = possibleMorningShifts;
+        this.possibleAfternoonShifts = possibleAfternoonShifts;
+        this.possibleNightShifts = possibleNightShifts;
+
         TextField Monday = new TextField("Monday");
         Monday.setPrefWidth(100);
         TextField Tuesday = new TextField("Tuesday");
@@ -49,9 +54,49 @@ public class Master extends VBox {
         }
         for(int i = 0; i < barPeople.size(); i++){ this.getChildren().add(boxes.get(i)); }
 
+        chooseMorningPeople(barPeople);
+    }
 
+    public boolean checkMorningConstants(ArrayList<Employee> barPeople) {
+        return true;
+    }
 
-
+    public void setShift(int [] shift, int index, int key){
+        shift[index] = key;
 
     }
-}
+
+    public void chooseMorningPeople(ArrayList<Employee> barPeople){
+        Random rand = new Random();
+
+
+        for(int i = 0; i < 3; i++){
+            int r = rand.nextInt(barPeople.size());
+            System.out.println("random r is: " + r);
+                if (barPeople.get(r).getShifts(0) == 1) {
+                    setShift(possibleMorningShifts, i, r);
+
+                }
+            System.out.println("morning shift is: " + this.possibleMorningShifts[i]);
+            }
+
+
+//        System.out.println("Morning shifts*****");
+//        for(int j = 0; j < 3; j++) {
+//            System.out.println(possibleMorningShifts[j]);
+//        }
+
+
+
+
+
+
+        }
+
+    }
+
+
+
+
+
+

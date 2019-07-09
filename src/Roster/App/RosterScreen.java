@@ -107,12 +107,6 @@ public class RosterScreen extends VBox {
 
         makeRosterButton.setOnMouseClicked(event -> {
 
-            System.out.println("Days off before requests:");
-            for (int i = 0; i < barPeople.size(); i++) {
-                System.out.println(barPeople.get(i).getName() + " : " + barPeople.get(i).getDaysOff());
-                System.out.println("    ******    ");
-            }
-
             ArrayList<HBox> requests = new ArrayList<>();
             int firstRequest = 0;
             int secondRequest = 0;
@@ -125,11 +119,8 @@ public class RosterScreen extends VBox {
                                             ((TextField) boxes.get(i).getChildren().get(j)).setText("off");
                                             if(firstRequest == 0){
                                                 firstRequest = j;
-                                                System.out.println("first request : " + firstRequest);
                                             }else if(firstRequest != 0){
                                                 secondRequest = j;
-                                                System.out.println("second request : " + secondRequest);
-                                                System.out.println("Current person to be changed is: " + barPeople.get(i).getName());
                                                 barPeople.get(i).setDaysOff(firstRequest, secondRequest);
                                                 firstRequest = 0;
                                                 secondRequest = 0;
@@ -140,12 +131,7 @@ public class RosterScreen extends VBox {
                                     }
                                 }
             }
-            System.out.println("Days off after requests: ");
-            for (int i = 0; i < barPeople.size(); i++) {
-                System.out.println(barPeople.get(i).getName() + " : " + barPeople.get(i).getDaysOff());
-                System.out.println("    ******    ");
-            }
-            System.out.println(screenHeight);
+
             Scene root = new Scene(new Master(screenWidth, screenHeight, sceneController, barPeople));
             primaryStage.setScene(root);
             primaryStage.setFullScreen(true);
