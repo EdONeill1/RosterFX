@@ -28,12 +28,22 @@ public class Employee extends HBox {
     }
 
     public int getShifts(int key) {
+        System.out.println("key is : " + key);
         for(int i = 0; i < 3; i++){
+            System.out.println("i is");
             if(shifts[i] == key){
                 return shifts[i];
             }
         }
         return -1;
+    }
+
+    public boolean canWorkShift(int key){
+        if(shifts[key] == 1){
+            return true;
+        }else{
+            return false;
+        }
     }
 
     public int getDaysOff() {

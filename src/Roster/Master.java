@@ -8,16 +8,25 @@ import javafx.scene.layout.VBox;
 import java.lang.reflect.Array;
 import java.util.ArrayList;
 import java.util.Random;
+import java.util.Stack;
 
 public class Master extends VBox {
-    int [] totalShifts = new int[9];
-    public int [] possibleMorningShifts = new int[3];
-    int [] possibleAfternoonShifts = new int[2];
-    int [] possibleNightShifts = new int[4];
+    int[] totalShifts = new int[9];
+    public int[] possibleMorningShifts = new int[3];
+    int[] possibleAfternoonShifts = new int[2];
+    int[] possibleNightShifts = new int[4];
+    int[] restricted = new int[3];
+    double screenWidth;
+    double screenHeight;
+    SceneController sceneController;
 
-    public Master(double screenWidth, double screenHeight, SceneController sceneController, ArrayList<Employee> barPeople){
+    public Master(double screenWidth, double screenHeight, SceneController sceneController, ArrayList<Employee> barPeople) {
+        this.screenWidth = screenWidth;
+        this.screenHeight = screenHeight;
+        this.sceneController = sceneController;
         this.totalShifts = totalShifts;
-        this.possibleMorningShifts = possibleMorningShifts;
+        this.possibleMorningShifts = getPossibleMorningShifts();
+        this.restricted = restricted;
         this.possibleAfternoonShifts = possibleAfternoonShifts;
         this.possibleNightShifts = possibleNightShifts;
 
@@ -46,54 +55,99 @@ public class Master extends VBox {
         days.add(Sunday);
 
         ArrayList<HBox> boxes = new ArrayList<>();
-        for(int i = 0; i < barPeople.size(); i++){
+        for (int i = 0; i < barPeople.size(); i++) {
             boxes.add(new HBox(new TextField(barPeople.get(i).getName()), new TextField(days.get(0).getText()), new TextField(days.get(1).getText()),
                     new TextField(days.get(2).getText()), new TextField(days.get(3).getText()),
                     new TextField(days.get(4).getText()), new TextField(days.get(5).getText()),
                     new TextField(days.get(6).getText())));
         }
-        for(int i = 0; i < barPeople.size(); i++){ this.getChildren().add(boxes.get(i)); }
-
-        chooseMorningPeople(barPeople);
-    }
-
-    public boolean checkMorningConstants(ArrayList<Employee> barPeople) {
-        return true;
-    }
-
-    public void setShift(int [] shift, int index, int key){
-        shift[index] = key;
-
-    }
-
-    public void chooseMorningPeople(ArrayList<Employee> barPeople){
-        Random rand = new Random();
-
-
-        for(int i = 0; i < 3; i++){
-            int r = rand.nextInt(barPeople.size());
-            System.out.println("random r is: " + r);
-                if (barPeople.get(r).getShifts(0) == 1) {
-                    setShift(possibleMorningShifts, i, r);
-
+        for (int i = 0; i < barPeople.size(); i++) {
+            this.getChildren().add(boxes.get(i));
+        }
+        System.out.println(" ***** Morning ***** ");
+        chooseMorningPeople(barPeople, 3);
+        for(int i = 0; i < possibleMorningShifts.length; i++) {
+            for (int j = i + 1; j < possibleMorningShifts.length; j++) {
+                System.out.println("Comparing " + possibleMorningShifts[i] + " to " + possibleMorningShifts[j]);
+                if (possibleMorningShifts[i] == possibleMorningShifts[j]) {
+                    chooseMorningPeople(barPeople, 1);
                 }
-            System.out.println("morning shift is: " + this.possibleMorningShifts[i]);
             }
+        }
 
 
-//        System.out.println("Morning shifts*****");
-//        for(int j = 0; j < 3; j++) {
-//            System.out.println(possibleMorningShifts[j]);
-//        }
+        System.out.println(" ");
+        System.out.println(" ***** Afternoon *****");
+        chooseAfternoonPeople(barPeople, 2);
+        for(int i = 0; i < 2; i++){
+            System.out.println(barPeople.get(possibleAfternoonShifts[i]).getName());
+        }
+        System.out.println(" ");
+        System.out.println(" ***** Night *****");
+        chooseNightPeople(barPeople, 4);
+        for(int i = 0; i < 4; i++){
+            System.out.println(barPeople.get(possibleNightShifts[i]).getName());
+        }
+    }
+
+    public int[] getPossibleMorningShifts() { return possibleMorningShifts; }
+
+    public boolean isRestricted(int [] restrictedArray, int key){
+        for(int i = 0; i < restrictedArray.length; i++){
+            if(restrictedArray[i] == key){
+                return true;
+            }
+        }
+        return false;
+
+    }
+
+    public void chooseMorningPeople(ArrayList<Employee> barPeople, int numPeople) {
+        Random rand = new Random();
+        for(int i = 0; i < numPeople; i++) {
+            int r = rand.nextInt(barPeople.size());
+            if (!isRestricted(restricted, r)) {
+                if (barPeople.get(r).canWorkShift(0)) {
+                    possibleMorningShifts[i] = r;
+                    restricted[i] = r;
+                } else {
+                    chooseMorningPeople(barPeople, 1);
+                }
+            } else {
+                chooseMorningPeople(barPeople, 1);
+            }
+        }
 
 
 
 
+    }
 
-
+    public void chooseAfternoonPeople(ArrayList<Employee> barPeople, int numPeople){
+        Random rand = new Random();
+        for(int i = 0; i < numPeople; i++){
+            int r = rand.nextInt(barPeople.size());
+            if(barPeople.get(r).canWorkShift(1)) {
+                possibleAfternoonShifts[i] = r;
+            }else{
+                chooseAfternoonPeople(barPeople, 1);
+            }
         }
 
     }
+    public void chooseNightPeople(ArrayList<Employee> barPeople, int numPeople){
+        Random rand = new Random();
+        for(int i = 0; i < numPeople; i++){
+            int r = rand.nextInt(barPeople.size());
+            if(barPeople.get(r).canWorkShift(2)) {
+                possibleNightShifts[i] = r;
+            }else{
+                chooseNightPeople(barPeople, 1);
+            }
+        }
+
+    }
+}
 
 
 

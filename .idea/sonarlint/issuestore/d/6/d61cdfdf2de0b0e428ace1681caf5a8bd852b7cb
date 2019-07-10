@@ -1,9 +1,32 @@
 
-qsquid:MaximumInheritanceDepth"<This class has 6 parents which is greater than 5 authorized.(Ôˆ›½üÿÿÿÿ8‡´Ý¸¯-
-—squid:S1319"tThe type of the "barPeople" object should be an interface such as "List" rather than the implementation "ArrayList".(¦í¹ýÿÿÿÿ8…™‘å¶-
-gsquid:UselessImportCheck"7Remove this unused import 'javafx.scene.control.Label'.(ö²­žÿÿÿÿÿ8Ïñ”å¶-
+˜squid:S4165"uRemove this useless assignment; "possibleAfternoonShifts" already holds the assigned value along all execution paths.(åÆªíüÿÿÿÿ8´ –Æ½-
+V
+squid:S106_"9Replace this use of System.out or System.err by a logger.(Šè€°8¢Ìéá½-
+nsquid:CommentedOutCodeLinee"<This block of commented-out lines of code should be removed.(ø…æìúÿÿÿÿ8ù‚ñá½-
+_squid:UselessImportCheck"4Remove this unused import 'java.lang.reflect.Array'.(‡¡É˜8¾•ÃÆ½-
+psquid:S00117!"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ýßäÑ8­åÖá½-
+Œsquid:S4165"iRemove this useless assignment; "totalShifts" already holds the assigned value along all execution paths.(ÐÁó£ÿÿÿÿÿ8­åÖá½-
+—squid:S1319H"tThe type of the "barPeople" object should be an interface such as "List" rather than the implementation "ArrayList".(ÜÐ§Ìþÿÿÿÿ8­åÖá½-
+usquid:S00117"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Ê¸Ôîüÿÿÿÿ8­åÖá½-
+Asquid:S2119Q"Save and re-use this "Random".(šŸ«íøÿÿÿÿ8­åÖá½-
+›"squid:ClassVariableVisibilityCheck"aMake possibleMorningShifts a static final constant or non-public and provide accessors if needed.(êÞœêùÿÿÿÿ8ôäÒÇ½-
+lsquid:MaximumInheritanceDepth"<This class has 6 parents which is greater than 5 authorized.(ï©í8‡´Ý¸¯-
+dsquid:S1226R"FIntroduce a new variable instead of reusing the parameter "numPeople".(ƒËÉÂ8ˆÅ¢â½-
+usquid:S00117%"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÇÄÕþýÿÿÿÿ8­åÖá½-
+psquid:S00117#"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÉÆÈÿ8­åÖá½-
+Ssquid:S1172H"0Remove this unused method parameter "barPeople".(ÜÐ§Ìþÿÿÿÿ8­åÖá½-
+\squid:UselessImportCheck",Remove this unused import 'java.util.Stack'.(ÞÈ†üúÿÿÿÿ8ÄüÅâ½-
+isquid:CommentedOutCodeLinek"<This block of commented-out lines of code should be removed.(Öü±Ä8Ààéá½-
+V
+squid:S106V"9Replace this use of System.out or System.err by a logger.(ÿ–Æó8¼–®â½-
+V
+squid:S106`"9Replace this use of System.out or System.err by a logger.(¯Î×­8ÉÓ³â½-
 rsquid:S00120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(í¾ø¯
-isquid:UselessImportCheck	"9Remove this unused import 'javafx.scene.shape.Rectangle'.(ÖÉ­Œþÿÿÿÿ8­Û·ç³-
-ksquid:UselessImportCheck"@Remove this unused import 'Roster.Controllers.MasterController'.(‹Žú¾8Î…‰»¯-
-`squid:UselessImportCheck"5Remove this unused import 'javafx.scene.paint.Color'.(Ïî£à8è˜·ç³-
-Ysquid:S1172"6Remove this unused method parameter "sceneController".(¦í¹ýÿÿÿÿ8Î…‰»¯-
+’squid:S1319"tThe type of the "barPeople" object should be an interface such as "List" rather than the implementation "ArrayList".(ûªÜÑ8…™‘å¶-
+—squid:S1319P"tThe type of the "barPeople" object should be an interface such as "List" rather than the implementation "ArrayList".(Ð€ÑÅøÿÿÿÿ8­åÖá½-
+psquid:S00117)"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¾‰¥ñ8­åÖá½-
+psquid:S00117+"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Š¬¾”8­åÖá½-
+usquid:S00117'"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(³È´õþÿÿÿÿ8­åÖá½-
+V
+squid:S106X"9Replace this use of System.out or System.err by a logger.(³Þà8ý€¯â½-
+Žsquid:S4165"qRemove this useless assignment; "possibleNightShifts" already holds the assigned value along all execution paths.(•§„O8­åÖá½-

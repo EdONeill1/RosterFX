@@ -1,27 +1,22 @@
 
-\
-squid:S106›"9Replace this use of System.out or System.err by a logger.(±éÇ§şÿÿÿÿ8å¦¦œ½-
-osquid:CommentedOutCodeLineá"<This block of commented-out lines of code should be removed.(¿İÁ“ùÿÿÿÿ8óÚ¤œ½-
-usquid:S3776"RRefactor this method to reduce its Cognitive Complexity from 45 to the 15 allowed.(©ô•«üÿÿÿÿ8²üÖôº-
-nsquid:UselessImportCheck">Remove this unused import 'javafx.collections.ObservableList'.(ÄÜ€éüÿÿÿÿ8²üÖôº-
+osquid:CommentedOutCodeLineÁ"<This block of commented-out lines of code should be removed.(‡ƒÓŸøÿÿÿÿ8¢†Ç½-
 isquid:UselessImportCheck"9Remove this unused import 'javafx.scene.layout.GridPane'.(ÖÀ¹¯ûÿÿÿÿ8ã÷„õº-
-\
-squid:S106‚"9Replace this use of System.out or System.err by a logger.(Õæ«Ÿùÿÿÿÿ8¸Ì¬œ½-
-osquid:CommentedOutCodeLineÙ"<This block of commented-out lines of code should be removed.(³„ áøÿÿÿÿ8óÚ¤œ½-
-–squid:S1319Ø"wThe type of the "namesAndDays" object should be an interface such as "List" rather than the implementation "ArrayList".(ğ•œ—8óÚ¤œ½-
-Nsquid:S1066"/Merge this if statement with the enclosing one.(áèÒ·8®´œ½-
-psquid:S00117?"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÉÆÈÿ8²üÖôº-
+Osquid:S1481s",Remove this unused "nodeOut" local variable.(¿ÑÄªüÿÿÿÿ8¢†Ç½-
 wsquid:S00120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(ËÒ„êÿÿÿÿÿ
-psquid:S00117E"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¾‰¥ñ8²üÖôº-
-usquid:S00117A"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÇÄÕşıÿÿÿÿ8²üÖôº-
-psquid:S00117G"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Š¬¾”8²üÖôº-
-psquid:S00117="QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ıßäÑ8²üÖôº-
-Ysquid:S1172"6Remove this unused method parameter "sceneController".(©ô•«üÿÿÿÿ8†º®š½-
+usquid:S00117@"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Ê¸Ôîüÿÿÿÿ8²üÖôº-
+osquid:CommentedOutCodeLine¾"<This block of commented-out lines of code should be removed.(³„ áøÿÿÿÿ8¢†Ç½-
+osquid:CommentedOutCodeLineÄ"<This block of commented-out lines of code should be removed.(×©¼ôúÿÿÿÿ8¢†Ç½-
+usquid:S3776 "RRefactor this method to reduce its Cognitive Complexity from 32 to the 15 allowed.(©ô•«üÿÿÿÿ8²üÖôº-
+osquid:CommentedOutCodeLineÆ"<This block of commented-out lines of code should be removed.(¿İÁ“ùÿÿÿÿ8¢†Ç½-
+usquid:S00117H"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(³È´õşÿÿÿÿ8²üÖôº-
+psquid:S00117J"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¾‰¥ñ8²üÖôº-
+psquid:S00117L"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Š¬¾”8²üÖôº-
+nsquid:UselessImportCheck">Remove this unused import 'javafx.collections.ObservableList'.(ÄÜ€éüÿÿÿÿ8²üÖôº-
 qsquid:MaximumInheritanceDepth"<This class has 6 parents which is greater than 5 authorized.(Š‰šùÿÿÿÿ8²üÖôº-
-usquid:S00117;"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Ê¸Ôîüÿÿÿÿ8²üÖôº-
-osquid:CommentedOutCodeLineß"<This block of commented-out lines of code should be removed.(×©¼ôúÿÿÿÿ8óÚ¤œ½-
-osquid:CommentedOutCodeLineÜ"<This block of commented-out lines of code should be removed.(‡ƒÓŸøÿÿÿÿ8óÚ¤œ½-
+Msquid:S1066v"/Merge this if statement with the enclosing one.(áèÒ·8¢†Ç½-
 \
-squid:S106Â"9Replace this use of System.out or System.err by a logger.(•Õëÿÿÿÿÿ8óÚ¤œ½-
-osquid:CommentedOutCodeLine¢"<This block of commented-out lines of code should be removed.(ø¯úêşÿÿÿÿ8óÚ¤œ½-
-usquid:S00117C"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(³È´õşÿÿÿÿ8²üÖôº-
+squid:S106§"9Replace this use of System.out or System.err by a logger.(•Õëÿÿÿÿÿ8¢†Ç½-
+–squid:S1319½"wThe type of the "namesAndDays" object should be an interface such as "List" rather than the implementation "ArrayList".(ğ•œ—8¢†Ç½-
+usquid:S00117F"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÇÄÕşıÿÿÿÿ8²üÖôº-
+psquid:S00117B"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ıßäÑ8²üÖôº-
+psquid:S00117D"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÉÆÈÿ8²üÖôº-
