@@ -19,6 +19,7 @@ public class Master extends VBox {
     double screenWidth;
     double screenHeight;
     SceneController sceneController;
+    Random rand = new Random();
 
     public Master(double screenWidth, double screenHeight, SceneController sceneController, ArrayList<Employee> barPeople) {
         this.screenWidth = screenWidth;
@@ -64,16 +65,14 @@ public class Master extends VBox {
         for (int i = 0; i < barPeople.size(); i++) {
             this.getChildren().add(boxes.get(i));
         }
+
+
         System.out.println(" ***** Morning ***** ");
         chooseMorningPeople(barPeople, 3);
         for(int i = 0; i < possibleMorningShifts.length; i++) {
-            for (int j = i + 1; j < possibleMorningShifts.length; j++) {
-                System.out.println("Comparing " + possibleMorningShifts[i] + " to " + possibleMorningShifts[j]);
-                if (possibleMorningShifts[i] == possibleMorningShifts[j]) {
-                    chooseMorningPeople(barPeople, 1);
-                }
-            }
+            System.out.println(barPeople.get(possibleMorningShifts[i]).getName());
         }
+
 
 
         System.out.println(" ");
@@ -103,7 +102,6 @@ public class Master extends VBox {
     }
 
     public void chooseMorningPeople(ArrayList<Employee> barPeople, int numPeople) {
-        Random rand = new Random();
         for(int i = 0; i < numPeople; i++) {
             int r = rand.nextInt(barPeople.size());
             if (!isRestricted(restricted, r)) {
@@ -117,10 +115,28 @@ public class Master extends VBox {
                 chooseMorningPeople(barPeople, 1);
             }
         }
+        System.out.println("****** MORNING BEFORE VALUE CHANGE");
+        for(int i = 0; i < possibleMorningShifts.length; i++) {
+            System.out.println(possibleMorningShifts[i]);
+        }
+        changeDuplicateValues(barPeople, possibleMorningShifts, 0);
+        System.out.println("****** MORNING AFTER VALUE CHANGE");
+        for(int i = 0; i < possibleMorningShifts.length; i++) {
+            System.out.println(possibleMorningShifts[i]);
+        }
+    }
 
-
-
-
+    public void changeDuplicateValues(ArrayList<Employee> barPeople, int [] shift, int timeOfShift){
+        for(int i = 0; i < shift.length; i++){
+            for(int j = i + 1; j < shift.length; j++){
+                if(shift[i] == shift[j]){
+                    int r = rand.nextInt(barPeople.size());
+                    if( (!(isRestricted(restricted, r))) && barPeople.get(r).canWorkShift(timeOfShift)){
+                        shift[j] = r;
+                    }
+                }
+            }
+        }
     }
 
     public void chooseAfternoonPeople(ArrayList<Employee> barPeople, int numPeople){

@@ -111,7 +111,7 @@ public class RosterScreen extends VBox {
             int firstRequest = 0;
             int secondRequest = 0;
             for (int i = 0; i < barPeople.size(); i++) {
-                        requests.add(boxes.get(i));
+
                         Node nodeOut = boxes.get(i);
                             for (int j = 0; j < 8; j++) {
                                     if (boxes.get(i).getChildren().get(j) instanceof TextField) {
